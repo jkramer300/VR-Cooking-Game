@@ -28,6 +28,7 @@ public class RezeptUI : MonoBehaviour
             AddText(recipe.instructions[i], 8);
 
         }
+
     }
     void UpdateRecipe()
     {

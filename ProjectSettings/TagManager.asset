@@ -5,6 +5,24 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anchor
+  - Whiteboard
+  - Hand
+  - Seife
+  - Water
+  - Lappen
+  - Schnittstelle
+  - Messer
+  - Pfanne
+  - "Gem\xFCse"
+  - Oil
+  - "Gem\xFCseBr\xFChe"
+  - Egg
+  - Dose
+  - Tomatenmark
+  - Soy
+  - Sour
+  - Schnitzel
+  - Info
   layers:
   - Default
   - TransparentFX
@@ -16,7 +34,7 @@ TagManager:
   - Interactive
   - Ingredient
   - Mehl
-  - 
+  - Oil
   - 
   - 
   - 
@@ -51,3 +69,4 @@ TagManager:
   - Light Layer 5
   - Light Layer 6
   - Light Layer 7
+  m_MigratedRenderPipelines: []

@@ -10,27 +10,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7c76d5be865c54040a2b61e3a5951bfd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7967144
+      value: 0.5572858
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c76d5be865c54040a2b61e3a5951bfd, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7967144
+      value: 0.5572858
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c76d5be865c54040a2b61e3a5951bfd, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.449882
+      value: 2.4131234
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c76d5be865c54040a2b61e3a5951bfd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.049
+      value: -7.0487
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c76d5be865c54040a2b61e3a5951bfd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.311
+      value: 1.2902
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c76d5be865c54040a2b61e3a5951bfd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.888
+      value: 6.8879
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7c76d5be865c54040a2b61e3a5951bfd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -133,10 +133,10 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2435272375591967255}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -225,6 +225,8 @@ MonoBehaviour:
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
+  m_AutoFindParentInteractableInHierarchy: 0
+  m_ParentInteractableObject: {fileID: 0}
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 1
@@ -234,6 +236,7 @@ MonoBehaviour:
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
   m_MovementType: 2
+  m_PredictedVisualsTransform: {fileID: 0}
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
@@ -275,3 +278,7 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+  m_LimitLinearVelocity: 0
+  m_LimitAngularVelocity: 0
+  m_MaxLinearVelocityDelta: 10
+  m_MaxAngularVelocityDelta: 20

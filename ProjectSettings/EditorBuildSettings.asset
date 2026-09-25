@@ -6,8 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Test.unity
+    path: Assets/ChoseeLanguage.unity
+    guid: 223ba69f88a327f45bf280cacc959c50
+  - enabled: 1
+    path: Assets/TutorialEnglisch.unity
+    guid: 28f09d55ce96a074b95de108393524f5
+  - enabled: 1
+    path: Assets/TutorialDeutsch.unity
+    guid: c5e4b339245441445be70cab747a50cb
+  - enabled: 1
+    path: Assets/Main.unity
     guid: c59c1a83ebe1ab746a808aa97586f026
+  - enabled: 1
+    path: Assets/MainDeutsch.unity
+    guid: 1bb3a564ee24d7a44af50be107e46a5e
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}

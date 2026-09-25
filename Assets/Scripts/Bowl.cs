@@ -18,8 +18,8 @@ public class Bowl : MonoBehaviour
     (float, float) capHeight = (-0.0089f, 0.0347f);
     (float, float) capSize = (0.01f, 0.025f);
 
-    List<GameObject> content = new List<GameObject>();
-    GameObject _parent;
+    public List<GameObject> content = new List<GameObject>();
+    public GameObject _parent;
     bool _test = true;
     bool addFlour = false;
     ClipShader clipShader = new ClipShader();
@@ -28,14 +28,22 @@ public class Bowl : MonoBehaviour
     public List<float> types = new List<float>();
     void Start()
     {
-        doug.SetFloat("_RevealAmount", doug.GetFloat("_Min"));
+        /**doug.SetFloat("_RevealAmount", doug.GetFloat("_Min"));
         for (int i = 0; i < 5; i++)
-            types.Add(0);
+            types.Add(0);**/
     }
 
     // Update is called once per frame
     void Update()
     {
+        /**if (InputSystem.actions.FindAction("Open Egg").WasPressedThisFrame() && GetComponent<XRGrabInteractable>().isSelected)
+        {
+            foreach (GameObject ingredient in content)
+            {
+                ingredient.transform.SetParent(null, true);
+                ingredient.GetComponent<Rigidbody>().isKinematic = false;
+            }
+        }
         if (addFlour && factor <= 1)
         {
             AddFlour(1);
@@ -45,7 +53,7 @@ public class Bowl : MonoBehaviour
         if (InputSystem.actions.FindAction("Open Egg").WasPressedThisFrame() && GetComponent<XRGrabInteractable>().isSelected)
         {
             ResetBowl();
-        }
+        }**/
     }
     void ResetBowl()
     {
@@ -60,7 +68,7 @@ public class Bowl : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 8)
+        if (other.gameObject.GetComponent<Ingredient>() != null)
         {
 
             GameObject test = content.Find(x => x == other.gameObject);
@@ -83,7 +91,7 @@ public class Bowl : MonoBehaviour
     }
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == 8)
+        if (other.gameObject.GetComponent<Ingredient>() != null)
         {
 
             GameObject test = content.Find(x => x == other.gameObject);
@@ -105,7 +113,7 @@ public class Bowl : MonoBehaviour
             addFlour = false;
         }
     }
-    public void Selected()
+    /**public void Selected()
     {
         foreach (GameObject ingredient in content)
         {
@@ -121,7 +129,7 @@ public class Bowl : MonoBehaviour
             ingredient.transform.SetParent(null, true);
             ingredient.GetComponent<Rigidbody>().isKinematic = false;
         }
-    }
+    }**/
     public void AddFlour(int i)
     {
         contentWeight += 0.001f * i;

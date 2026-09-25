@@ -10,7 +10,7 @@ public class Waage : MonoBehaviour
     Button tareButton;
     float weight;
     float start = 0f;
-    Bowl bowl = null;
+    public Bowl bowl = null;
 
     // Start is called before the first frame update
     void Start()

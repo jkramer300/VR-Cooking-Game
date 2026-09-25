@@ -8,17 +8,18 @@ public class Drehschalter : MonoBehaviour
 {
     private HingeJoint hinge;
     //private int steps = 5;
-    public float rotation = 180f;
+    public float rotation = 270f;
 
     void Start()
     {
         hinge = GetComponent<HingeJoint>();
     }
-    //void Update(){}
-
+    
+    
     public void SetPos()
-    {
-        //transform.localEulerAngles = new Vector3(rotation, transform.eulerAngles.y, transform.eulerAngles.z);
+    {   
+        Debug.Log(transform.localEulerAngles);
+        //transform.localEulerAngles = new Vector3(180f, transform.localEulerAngles.y, transform.localEulerAngles.z);
     }
     public void LockPos()
     {

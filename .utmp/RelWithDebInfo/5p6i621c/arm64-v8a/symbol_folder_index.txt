@@ -1,0 +1,1 @@
+C:\Unity\Kochen Prototyp\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\5p6i621c\obj\arm64-v8a

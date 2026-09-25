@@ -6,5 +6,6 @@ public class CurrentRecipe : MonoBehaviour
 {
     public List<Recipe> recipes;
     public Recipe currentRecipe;
+    public Recipe secondRecipe;
 }
 

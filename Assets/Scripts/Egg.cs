@@ -51,7 +51,7 @@ public class Egg : MonoBehaviour
         if (rb != null && !cracked)
         {
             float speed = rb.linearVelocity.magnitude;
-            Debug.Log("Geschwindigkeit beim Aufprall: " + speed + " m/s");
+            //Debug.Log("Geschwindigkeit beim Aufprall: " + speed + " m/s");
 
             if (speed > 0.5)
             {
@@ -84,6 +84,10 @@ public class Egg : MonoBehaviour
             eggBottom.AddComponent<Rigidbody>();
             eggBottom.AddComponent<XRGrabInteractable>();
             test = false;
+            eggWhite.layer = 9;
+            eggWhite.transform.SetParent(null);
+
+            GetComponent<Problems>().AddProblem(gameObject);
         }
     }
 }

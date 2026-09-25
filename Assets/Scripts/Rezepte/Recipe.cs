@@ -14,6 +14,7 @@ public class Recipe : MonoBehaviour
     public int ovenMode;
     public int ovenDegree;
     public int ovenTime;
+    public List<String> steps;
     public List<String> instructions;
     public int numberOfInstructions;
 

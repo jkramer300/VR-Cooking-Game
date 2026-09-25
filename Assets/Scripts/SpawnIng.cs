@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Hanzzz.MeshSlicerFree;
 using TMPro;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -10,16 +11,14 @@ using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit.Samples.SpatialKeyboard;
 using UnityEngine.XR.Interaction.Toolkit.UI;
 
-public class SpawnIng : MonoBehaviour
+public class Spawning : MonoBehaviour
 {
     public List<GameObject> ingredients;
     public GameObject SpawnPoint;
     public GameObject ingredientsPanel;
-    public GameObject keyboard;
     // Start is called before the first frame update
     void Start()
     {
-        keyboard.SetActive(false);
     }
 
     public void SpawnItem(GameObject button)
@@ -58,14 +57,17 @@ public class SpawnIng : MonoBehaviour
     {
         Instantiate(ingredients[number], SpawnPoint.transform.position, SpawnPoint.transform.rotation);
     }
-    public void OpenKeyboard()
+    public void Spawn2(string name)
     {
-        keyboard.SetActive(true);
+        for(int i = 0; i < ingredients.Count; i++)
+        {
+            if(ingredients[i].name == name)
+            {
+                Instantiate(ingredients[i], SpawnPoint.transform.position, SpawnPoint.transform.rotation);
+            }
+        }
     }
-    public void CloseKeyboard()
-    {
-        keyboard.SetActive(false);
-    }
+    
     public void Search(TMP_InputField input)
     {
         foreach (Transform child in ingredientsPanel.transform)
@@ -79,6 +81,5 @@ public class SpawnIng : MonoBehaviour
                 child.gameObject.SetActive(false);
             }
         }
-        CloseKeyboard();
     }
 }
